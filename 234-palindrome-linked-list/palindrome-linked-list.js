@@ -33,7 +33,8 @@ var isPalindrome = function(head) {
     return true;
 };
 
-// Approach 2:
+// Approach 2 - Recommended: 
+// Because Space complexity is O(1) while Time Complexity remains O(n) for both approaches
 
 var isPalindrome = function(head) {
   // finding the middle
