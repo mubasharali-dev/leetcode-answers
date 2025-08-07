@@ -13,21 +13,18 @@
 var removeNthFromEnd = function(head, n) {
     let sentinel = new ListNode();
     sentinel.next = head;
-    let length = 0;
+    let firstPointer = sentinel;
+    let secondPointer = sentinel;
 
-    while (head){
-        head = head.next;
-        length++;
+    for (let i =0; i < n; i++){
+        secondPointer = secondPointer.next;
     }
 
-    let prevPos = length - n;
-
-    let prev = sentinel;
-
-    for (let i =0; i< prevPos; i++){
-        prev = prev.next;
+    while (secondPointer && secondPointer.next){
+        secondPointer = secondPointer.next;
+        firstPointer = firstPointer.next;
     }
-    prev.next = prev.next.next;
+    firstPointer.next = firstPointer.next.next;
 
     return sentinel.next;
 };
