@@ -11,7 +11,7 @@
  */
 var swapPairs = function(head) {
     if (!head || !head.next) return head;
-
+    
     let dummy = new ListNode();
     dummy.next = head;
 
@@ -28,6 +28,5 @@ var swapPairs = function(head) {
         c = p.next;
         n = c && c.next;
     }
-
     return dummy.next;
 };
