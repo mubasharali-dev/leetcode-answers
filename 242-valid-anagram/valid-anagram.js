@@ -3,9 +3,15 @@
  * @param {string} t
  * @return {boolean}
  */
+ // APPROACH 1 - USING BUILT IN FUNCTIONS
+// var isAnagram = function(s, t) {
+//     return s.split("").sort().join("") === t.split("").sort().join("");
+// };
+
+// APPROACH 2 - USING THE HASH MAP - RECOMMENDED 
 var isAnagram = function(s, t) {
     if (s.length !== t.length) return false;
-    
+
     let map = {};
 
     for (let i =0; i< s.length; i++){
