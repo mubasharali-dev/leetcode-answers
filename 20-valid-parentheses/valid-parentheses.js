@@ -17,7 +17,7 @@ var isValid = function(s) {
     let top = stack.pop();
     if (!top || s[i] != map[top]){
         return false;
-    }
+        }
     }
   }
   return stack.length ===0;
